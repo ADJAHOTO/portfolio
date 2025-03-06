@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* Light theme */
+    --background-color: #E3F2FD; /* Valeur par défaut */
+    --text-color: #1e293b;       /* Valeur par défaut */
+  }
+
+  .dark {
+    /* Dark theme */
+    --background-color: rgba(11, 15, 25, 0.7);
+    --text-color: white;
+  }
+
+  body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+  /* Style de la barre de defilement */
+::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement */
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19; /* Fond de la scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fff, #ff4500); /* Dégradé du blanc au rouge */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ffe5d9, #ff0000); /* Effet plus vif au survol */
+}
+
+}
