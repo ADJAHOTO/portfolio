@@ -1,4 +1,6 @@
-Portfolio
+**Portfolio**
+
+
 Portfolio interactif réalisé en React.js et Tailwind CSS. Ce projet présente mes compétences et mes projets réalisés de manière interactive et responsive.
 
 Table des matières
@@ -25,9 +27,6 @@ Voici les étapes pour cloner et installer ce projet sur ta machine locale :
 
 Cloner le dépôt :
 
-bash
-Copier
-Modifier
 git clone https://github.com/ADJAHOTO/portfolio.git
 Accéder au répertoire du projet :
 cd portfolio
@@ -60,4 +59,5 @@ https://portfolio-seven-azure-13.vercel.app/
 
 Auteur
 Nom : ADJAHOTO Jean Bénisse
+
 Email : benisseadjahoto@gmail.com
