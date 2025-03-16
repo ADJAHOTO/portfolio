@@ -34,17 +34,15 @@ const Competences = () => {
             id="competences"  
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.8 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            className="bg-[#0b0f19] text-white py-11 "
+            className="bg-[#0b0f19] text-white py-11"
         >
-            <div className="max-w-7xl py-12 mx-auto text-center min-h-[800px]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center min-h-[800px]">
                 <h2 className="text-3xl font-bold text-orange-600">Technical Skills</h2>
 
                 {/* Tabs */}
-                <div className="flex justify-center space-x-4 mt-6 border-b border-gray-700 pb-4">
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6 border-b border-gray-700 pb-4">
                     {Object.keys(skillsData).map((category) => (
                         <button
                             key={category}
@@ -53,7 +51,6 @@ const Competences = () => {
                                 activeTab === category
                                     ? "bg-white text-black shadow-md"
                                     : "text-gray-400 hover:text-orange-600"
-                                    
                             }`}
                         >
                             {category}
@@ -62,15 +59,19 @@ const Competences = () => {
                 </div>
 
                 {/* Skills Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 ">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-8">
                     {skillsData[activeTab].map((skill, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="flex flex-col items-center justify-center bg-[#1a1f2e] border border-gray-700 p-4 rounded-lg shadow-md hover:scale-105 transition-transform hover:bg-gray-500 "
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            className="flex flex-col items-center justify-center bg-[#1a1f2e] border border-gray-700 p-4 rounded-lg shadow-md hover:scale-105 transition-transform hover:bg-gray-500"
                         >
                             <img src={skill.image} alt={skill.name} className="w-12 h-12 mb-2" />
-                            <span className="font-medium">{skill.name}</span>
-                        </div>
+                            <span className="font-medium text-sm sm:text-base">{skill.name}</span>
+                        </motion.div>
                     ))}
                 </div>
             </div>
